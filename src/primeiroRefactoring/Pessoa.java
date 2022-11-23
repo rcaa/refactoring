@@ -1,6 +1,7 @@
 package primeiroRefactoring;
 
 import java.util.Date;
+import primeiroRefactoring.Endereco;
 
 public class Pessoa {
 
@@ -10,12 +11,9 @@ public class Pessoa {
 	private Date dataNascimento;
 	private String nomePai;
 	private String nomeMae;
-	private String logradouro;
-	private String complemento;
-	private String cep;
+	private Endereco endereco;
 	
-	public Pessoa(String nome, String cpf, String registroGeral, Date dataNascimento, String nomePai, String nomeMae,
-			String logradouro, String complemento, String cep) {
+	public Pessoa(String nome, String cpf, String registroGeral, Date dataNascimento, String nomePai, String nomeMae, Endereco endereco) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
@@ -23,9 +21,7 @@ public class Pessoa {
 		this.dataNascimento = dataNascimento;
 		this.nomePai = nomePai;
 		this.nomeMae = nomeMae;
-		this.logradouro = logradouro;
-		this.complemento = complemento;
-		this.cep = cep;
+		this.endereco = endereco;
 	}
 	public String getNome() {
 		return nome;
@@ -63,22 +59,12 @@ public class Pessoa {
 	public void setNomeMae(String nomeMae) {
 		this.nomeMae = nomeMae;
 	}
-	public String getLogradouro() {
-		return logradouro;
+
+	public getEndereco() {
+		return this.endereco;
 	}
-	public void setLogradouro(String logradouro) {
-		this.logradouro = logradouro;
-	}
-	public String getComplemento() {
-		return complemento;
-	}
-	public void setComplemento(String complemento) {
-		this.complemento = complemento;
-	}
-	public String getCep() {
-		return cep;
-	}
-	public void setCep(String cep) {
-		this.cep = cep;
+
+	public setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 }

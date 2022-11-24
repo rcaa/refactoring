@@ -6,14 +6,12 @@ public class Docente {
 
 	private String[] disciplinasMinistradas;
 	private Date dataAdmissao;
-	private String emailInstitucional;
 	private double remuneracao;
 	
-	public Docente(String[] disciplinasMinistradas, Date dataAdmissao, String emailInstitucional, double remuneracao) {
+	public Docente(String[] disciplinasMinistradas, Date dataAdmissao, double remuneracao) {
 		super();
 		this.disciplinasMinistradas = disciplinasMinistradas;
 		this.dataAdmissao = dataAdmissao;
-		this.emailInstitucional = emailInstitucional;
 		this.remuneracao = remuneracao;
 	}
 
@@ -33,13 +31,6 @@ public class Docente {
 		this.dataAdmissao = dataAdmissao;
 	}
 
-	public String getEmailInstitucional() {
-		return emailInstitucional;
-	}
-
-	public void setEmailInstitucional(String emailInstitucional) {
-		this.emailInstitucional = emailInstitucional;
-	}
 
 	public double getRemuneracao() {
 		return remuneracao;

@@ -9,16 +9,26 @@ public class Quicksort {
 		int[] vetor = new int[quantidade];
 
 		System.out.println("Vetor desordenado: ");
-		for (int i = 0; i < vetor.length; i++) {
+		vetor = criarVetor(vetor,quantidade)
+		quickSort(vetor, 0, vetor.length - 1);
+		System.out.println("\nVetor ordenado: ");
+		imprimirVetorOrdenado(vetor)
+	}
+
+	public static int[] criarVetor(int [] vetor, int quantidade) {
+  		for (int i = 0; i < vetor.length; i++) {
 			vetor[i] = (int) (Math.random() * quantidade);
 			System.out.print(i + " ");
 		}
-		quickSort(vetor, 0, vetor.length - 1);
-		System.out.println("\nVetor ordenado: ");
+
+        return vetor;
+    }
+
+    public void imprimirVetorOrdenado(int [] vetor){
 		for (int i : vetor) {
 			System.out.print(i + " ");
 		}
-	}
+    }
 
 	private static void quickSort(int[] vetor, int inicio, int fim) {
 		if (inicio < fim) {

@@ -8,16 +8,12 @@ public class Quicksort {
 		int quantidade = 10000;
 		int[] vetor = new int[quantidade];
 
-		System.out.println("Vetor desordenado: ");
-		for (int i = 0; i < vetor.length; i++) {
-			vetor[i] = (int) (Math.random() * quantidade);
-			System.out.print(i + " ");
-		}
+		vetor = gerarNumerosAleatorios(vetor, quantidade);
+		
 		quickSort(vetor, 0, vetor.length - 1);
-		System.out.println("\nVetor ordenado: ");
-		for (int i : vetor) {
-			System.out.print(i + " ");
-		}
+		
+		imprimirVetorOrdenado(vetor);
+
 	}
 
 	private static void quickSort(int[] vetor, int inicio, int fim) {
@@ -42,6 +38,22 @@ public class Quicksort {
 			int posicaoPivo = f;
 			quickSort(vetor, inicio, posicaoPivo - 1);
 			quickSort(vetor, posicaoPivo + 1, fim);
+		}
+	}
+	
+	private static int[] gerarNumerosAleatorios(int[] vetor, int quantidade) {
+		System.out.println("Vetor desordenado: ");
+		for (int i = 0; i < vetor.length; i++) {
+			vetor[i] = (int) (Math.random() * quantidade);
+			System.out.print(i + " ");
+		}
+		return vetor;
+	}
+	
+	public static void imprimirVetorOrdenado(int[] vetor) {
+		System.out.println("\nVetor ordenado: ");
+		for (int i : vetor) {
+			System.out.print(i + " ");
 		}
 	}
 }

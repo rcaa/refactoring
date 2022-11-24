@@ -10,9 +10,6 @@ public class Pessoa {
 	private Date dataNascimento;
 	private String nomePai;
 	private String nomeMae;
-	private String siape;
-	private String matricula;
-	private double coeficienteRendimento;
 	
 	public Pessoa(String nomeCompleto, String cpf, String registroGeral, Date dataNascimento, String nomePai,
 			String nomeMae, String siape, String matricula, double coeficienteRendimento) {
@@ -74,22 +71,6 @@ public class Pessoa {
 
 	public void setNomeMae(String nomeMae) {
 		this.nomeMae = nomeMae;
-	}
-
-	public String getSiape() {
-		return siape;
-	}
-
-	public void setSiape(String siape) {
-		this.siape = siape;
-	}
-
-	public String getMatricula() {
-		return matricula;
-	}
-
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
 	}
 
 	public double getCoeficienteRendimento() {

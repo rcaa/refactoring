@@ -10,12 +10,9 @@ public class Pessoa {
 	private Date dataNascimento;
 	private String nomePai;
 	private String nomeMae;
-	private String siape;
-	private String matricula;
-	private double coeficienteRendimento;
 	
 	public Pessoa(String nomeCompleto, String cpf, String registroGeral, Date dataNascimento, String nomePai,
-			String nomeMae, String siape, String matricula, double coeficienteRendimento) {
+			String nomeMae) {
 		super();
 		this.nomeCompleto = nomeCompleto;
 		this.cpf = cpf;
@@ -23,9 +20,6 @@ public class Pessoa {
 		this.dataNascimento = dataNascimento;
 		this.nomePai = nomePai;
 		this.nomeMae = nomeMae;
-		this.siape = siape;
-		this.matricula = matricula;
-		this.coeficienteRendimento = coeficienteRendimento;
 	}
 
 	public String getNomeCompleto() {
@@ -76,27 +70,4 @@ public class Pessoa {
 		this.nomeMae = nomeMae;
 	}
 
-	public String getSiape() {
-		return siape;
-	}
-
-	public void setSiape(String siape) {
-		this.siape = siape;
-	}
-
-	public String getMatricula() {
-		return matricula;
-	}
-
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
-	}
-
-	public double getCoeficienteRendimento() {
-		return coeficienteRendimento;
-	}
-
-	public void setCoeficienteRendimento(double coeficienteRendimento) {
-		this.coeficienteRendimento = coeficienteRendimento;
-	}
 }

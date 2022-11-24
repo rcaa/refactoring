@@ -7,14 +7,25 @@ public class Quicksort {
 	public static void main(String[] args) throws IOException {
 		int quantidade = 10000;
 		int[] vetor = new int[quantidade];
+		
+		vetor = preencherTextoVetorAleatorio(vetor);
+		
+		textVetor(vetor, "Vetor desordenado: ");
+		quickSort(vetor, 0, vetor.length - 1);
+		textVetor(vetor, "Vetor ordenado: ");
 
-		System.out.println("Vetor desordenado: ");
+	}
+	
+	private static int[] preencherTextoVetorAleatorio(vetor) {
 		for (int i = 0; i < vetor.length; i++) {
 			vetor[i] = (int) (Math.random() * quantidade);
-			System.out.print(i + " ");
 		}
-		quickSort(vetor, 0, vetor.length - 1);
-		System.out.println("\nVetor ordenado: ");
+		
+		return vetor;
+	}
+	
+	private static void textVetor(vetor, texto) {
+		System.out.print(texto);
 		for (int i : vetor) {
 			System.out.print(i + " ");
 		}

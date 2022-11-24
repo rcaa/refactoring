@@ -2,19 +2,20 @@ package terceiroRefactoring;
 
 import java.util.Date;
 
-public class Docente {
+public class Docente extends Pessoa {
 
 	private String[] disciplinasMinistradas;
 	private Date dataAdmissao;
-	private String emailInstitucional;
 	private double remuneracao;
+	private String siape;
 	
-	public Docente(String[] disciplinasMinistradas, Date dataAdmissao, String emailInstitucional, double remuneracao) {
-		super();
+	public Docente(String[] disciplinasMinistradas, Date dataAdmissao, double remuneracao, String siape, String nomeCompleto, String cpf, String registroGeral, Date dataNascimento, String nomePai, String nomeMae, String email) {
+		super(nomeCompleto, cpf, registroGeral, dataNascimento, nomePai, nomeMae, email);
 		this.disciplinasMinistradas = disciplinasMinistradas;
 		this.dataAdmissao = dataAdmissao;
 		this.emailInstitucional = emailInstitucional;
 		this.remuneracao = remuneracao;
+		this.siape = siape;
 	}
 
 	public String[] getDisciplinasMinistradas() {
@@ -33,19 +34,19 @@ public class Docente {
 		this.dataAdmissao = dataAdmissao;
 	}
 
-	public String getEmailInstitucional() {
-		return emailInstitucional;
-	}
-
-	public void setEmailInstitucional(String emailInstitucional) {
-		this.emailInstitucional = emailInstitucional;
-	}
-
 	public double getRemuneracao() {
 		return remuneracao;
 	}
 
 	public void setRemuneracao(double remuneracao) {
 		this.remuneracao = remuneracao;
+	}
+
+	public String getSiape() {
+		return siape;
+	}
+
+	public void setSiape(String siape) {
+		this.siape = siape;
 	}
 }

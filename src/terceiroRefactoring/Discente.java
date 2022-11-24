@@ -2,19 +2,21 @@ package terceiroRefactoring;
 
 import java.util.Date;
 
-public class Discente {
+public class Discente extends Pessoa {
 
 	private String[] disciplinasCursadas;
 	private Date dataIngresso;
 	private int numeroPeriodosCursados;
-	private String emailPessoal;
+	private String matricula;
+	private double coeficienteRendimento;
 	
-	public Discente(String[] disciplinasCursadas, Date dataIngresso, int numeroPeriodosCursados, String emailPessoal) {
-		super();
+	public Discente(String[] disciplinasCursadas, Date dataIngresso, int numeroPeriodosCursados, String matricula, double coeficienteRendimento, String nomeCompleto, String cpf, String registroGeral, Date dataNascimento, String nomePai, String nomeMae, String email) {
+		super(nomeCompleto, cpf, registroGeral, dataNascimento, nomePai, nomeMae, email);
 		this.disciplinasCursadas = disciplinasCursadas;
 		this.dataIngresso = dataIngresso;
 		this.numeroPeriodosCursados = numeroPeriodosCursados;
-		this.emailPessoal = emailPessoal;
+		this.matricula = matricula;
+		this.coeficienteRendimento = coeficienteRendimento;
 	}
 
 	public String[] getDisciplinasCursadas() {
@@ -41,11 +43,19 @@ public class Discente {
 		this.numeroPeriodosCursados = numeroPeriodosCursados;
 	}
 
-	public String getEmailPessoal() {
-		return emailPessoal;
+	public String getMatricula() {
+		return matricula;
 	}
 
-	public void setEmailPessoal(String emailPessoal) {
-		this.emailPessoal = emailPessoal;
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+
+	public double getCoeficienteRendimento() {
+		return coeficienteRendimento;
+	}
+
+	public void setCoeficienteRendimento(double coeficienteRendimento) {
+		this.coeficienteRendimento = coeficienteRendimento;
 	}
 }

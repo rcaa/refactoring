@@ -9,14 +9,10 @@ public class Docente extends Pessoa{
 	private double remuneracao;
 	private String siape;
 	
-	public Docente(String[] disciplinasMinistradas, Date dataAdmissao, double remuneracao, String siape, Pessoa pessoa) {
-		super(pessoa.getNomeCompleto(),
-				pessoa.getCpf(),
-				pessoa.getRegistroGeral(),
-				pessoa.getDataNascimento(),
-				pessoa.getNomePai(),
-				pessoa.getNomeMae(),
-				pessoa.getEmail());
+	public Docente(String[] disciplinasMinistradas, Date dataAdmissao, double remuneracao,
+			String siape, String nomeCompleto, String cpf, String registroGeral, Date dataNascimento,
+			String nomePai, String nomeMae, String email) {
+		super(nomeCompleto, cpf, registroGeral, dataNascimento, nomePai, nomeMae, email);
 		this.disciplinasMinistradas = disciplinasMinistradas;
 		this.dataAdmissao = dataAdmissao;
 		this.remuneracao = remuneracao;

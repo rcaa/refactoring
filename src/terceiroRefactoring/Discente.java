@@ -10,17 +10,16 @@ public class Discente extends Pessoa{
 	private String matricula;
 	private double coeficienteRendimento;
 	
-	public Discente(String[] disciplinasCursadas, Date dataIngresso, int numeroPeriodosCursados, String emailPessoal, Pessoa pessoa) {
-		super(pessoa.getNomeCompleto(),
-				pessoa.getCpf(),
-				pessoa.getRegistroGeral(),
-				pessoa.getDataNascimento(),
-				pessoa.getNomePai(),
-				pessoa.getNomeMae(),
-				pessoa.getEmail());
+	public Discente(String[] disciplinasCursadas, Date dataIngresso, int numeroPeriodosCursados, String emailPessoal, String matricula, 
+			double coeficienteRendimento, String nomeCompleto, String cpf, String registroGeral, Date dataNascimento, String nomePai,
+			String nomeMae, String email) {
+		
+		super(nomeCompleto, cpf, registroGeral, dataNascimento, nomePai, nomeMae, email);
 		
 		this.disciplinasCursadas = disciplinasCursadas;
 		this.dataIngresso = dataIngresso;
+		this.matricula = matricula;
+		this.coeficienteRendimento = coeficienteRendimento; 
 		this.numeroPeriodosCursados = numeroPeriodosCursados;
 	}
 

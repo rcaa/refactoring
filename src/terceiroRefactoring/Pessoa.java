@@ -13,9 +13,10 @@ public class Pessoa {
 	private String siape;
 	private String matricula;
 	private double coeficienteRendimento;
+	private Contato contato;
 	
 	public Pessoa(String nomeCompleto, String cpf, String registroGeral, Date dataNascimento, String nomePai,
-			String nomeMae, String siape, String matricula, double coeficienteRendimento) {
+			String nomeMae, String siape, String matricula, double coeficienteRendimento, Contato contato) {
 		super();
 		this.nomeCompleto = nomeCompleto;
 		this.cpf = cpf;
@@ -26,6 +27,7 @@ public class Pessoa {
 		this.siape = siape;
 		this.matricula = matricula;
 		this.coeficienteRendimento = coeficienteRendimento;
+		this.contato = contato;
 	}
 
 	public String getNomeCompleto() {

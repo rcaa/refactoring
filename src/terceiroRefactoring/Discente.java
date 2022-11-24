@@ -7,14 +7,12 @@ public class Discente {
 	private String[] disciplinasCursadas;
 	private Date dataIngresso;
 	private int numeroPeriodosCursados;
-	private String emailPessoal;
 	
-	public Discente(String[] disciplinasCursadas, Date dataIngresso, int numeroPeriodosCursados, String emailPessoal) {
+	public Discente(String[] disciplinasCursadas, Date dataIngresso, int numeroPeriodosCursados) {
 		super();
 		this.disciplinasCursadas = disciplinasCursadas;
 		this.dataIngresso = dataIngresso;
 		this.numeroPeriodosCursados = numeroPeriodosCursados;
-		this.emailPessoal = emailPessoal;
 	}
 
 	public String[] getDisciplinasCursadas() {
@@ -41,11 +39,4 @@ public class Discente {
 		this.numeroPeriodosCursados = numeroPeriodosCursados;
 	}
 
-	public String getEmailPessoal() {
-		return emailPessoal;
-	}
-
-	public void setEmailPessoal(String emailPessoal) {
-		this.emailPessoal = emailPessoal;
-	}
 }

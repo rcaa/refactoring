@@ -26,7 +26,15 @@ public class Quicksort {
 
 	private static void quickSort(int[] vetor, int inicio, int fim) {
 		if (inicio < fim) {
-			int pivo = vetor[inicio];
+			
+			int posicaoPivo = quebraLista(vetor, inicio, fim);
+			quickSort(vetor, inicio, posicaoPivo - 1);
+			quickSort(vetor, posicaoPivo + 1, fim);
+		}
+	}
+
+    private static int quebraLista(int[] vetor, int inicio, int fim){
+        int pivo = vetor[inicio];
 			int i = inicio + 1, f = fim;
 			while (i <= f) {
 				if (vetor[i] <= pivo)
@@ -43,9 +51,5 @@ public class Quicksort {
 			}
 			vetor[inicio] = vetor[f];
 			vetor[f] = pivo;
-			int posicaoPivo = f;
-			quickSort(vetor, inicio, posicaoPivo - 1);
-			quickSort(vetor, posicaoPivo + 1, fim);
-		}
-	}
+    }
 }

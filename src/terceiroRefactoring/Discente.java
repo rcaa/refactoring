@@ -1,36 +1,14 @@
 package terceiroRefactoring;
 
-import java.util.Date;
-
 public class Discente {
-
-	private String[] disciplinasCursadas;
-	private Date dataIngresso;
+	private InformacaoInstitucional informacaoInstitucional;
+	private Pessoa discente;
 	private int numeroPeriodosCursados;
-	private String emailPessoal;
 	
-	public Discente(String[] disciplinasCursadas, Date dataIngresso, int numeroPeriodosCursados, String emailPessoal) {
-		super();
-		this.disciplinasCursadas = disciplinasCursadas;
-		this.dataIngresso = dataIngresso;
+	public Discente(InformacaoInstitucional informacaoInstitucional, Pessoa discente, int numeroPeriodosCursados) {
+		this.informacaoInstitucional = informacaoInstitucional;
+		this.discente = discente;
 		this.numeroPeriodosCursados = numeroPeriodosCursados;
-		this.emailPessoal = emailPessoal;
-	}
-
-	public String[] getDisciplinasCursadas() {
-		return disciplinasCursadas;
-	}
-
-	public void setDisciplinasCursadas(String[] disciplinasCursadas) {
-		this.disciplinasCursadas = disciplinasCursadas;
-	}
-
-	public Date getDataIngresso() {
-		return dataIngresso;
-	}
-
-	public void setDataIngresso(Date dataIngresso) {
-		this.dataIngresso = dataIngresso;
 	}
 
 	public int getNumeroPeriodosCursados() {
@@ -41,11 +19,19 @@ public class Discente {
 		this.numeroPeriodosCursados = numeroPeriodosCursados;
 	}
 
-	public String getEmailPessoal() {
-		return emailPessoal;
+	public InformacaoInstitucional getInformacaoInstitucional() {
+		return informacaoInstitucional;
 	}
 
-	public void setEmailPessoal(String emailPessoal) {
-		this.emailPessoal = emailPessoal;
+	public void setInformacaoInstitucional(InformacaoInstitucional informacaoInstitucional) {
+		this.informacaoInstitucional = informacaoInstitucional;
+	}
+
+	public Pessoa getDiscente() {
+		return discente;
+	}
+
+	public void setDiscente(Pessoa discente) {
+		this.discente = discente;
 	}
 }

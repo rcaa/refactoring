@@ -6,20 +6,32 @@ public class Quicksort {
 
 	public static void main(String[] args) throws IOException {
 		int quantidade = 10000;
-		int[] vetor = new int[quantidade];
-
-		System.out.println("Vetor desordenado: ");
-		for (int i = 0; i < vetor.length; i++) {
-			vetor[i] = (int) (Math.random() * quantidade);
-			System.out.print(i + " ");
-		}
+		 
+		int[] vetor = generateArray(quantidade);
+		printArray("Vetor desordenado: ", vetor);
 		quickSort(vetor, 0, vetor.length - 1);
-		System.out.println("\nVetor ordenado: ");
+		printArray("\nVetor ordenado: ", vetor);
+		System.out.println();
+		
+	}
+	
+	private static void printArray(String legenda, int[] vetor) {
+		System.out.println(legenda);
+		
 		for (int i : vetor) {
 			System.out.print(i + " ");
 		}
 	}
-
+	
+	private static int[] generateArray(int quantidade) {
+		int vetor[] = new int[quantidade];
+		for (int i = 0; i < vetor.length; i++) {
+			vetor[i] = (int) (Math.random() * quantidade);
+			System.out.print(i + " ");
+		}
+		return vetor;
+	}
+	
 	private static void quickSort(int[] vetor, int inicio, int fim) {
 		if (inicio < fim) {
 			int pivo = vetor[inicio];
